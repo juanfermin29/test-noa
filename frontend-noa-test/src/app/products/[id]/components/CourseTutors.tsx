@@ -9,7 +9,7 @@ export const CourseTutors = ({ product }: { product: ProductLong }) => {
             {product.attributes.tutors.data.map((tutor) => (
                 <div key={tutor.id} className='border-gray-100 mb-4 p-2 border rounded  flex flex-row gap-10 w-full'>
                     <div>
-                        <Image src={process.env.NEXT_PUBLIC_STRAPI_BASE_API  + tutor.attributes.image.data[0].attributes.url}
+                        <Image src={tutor.attributes.image}
                             alt={tutor.attributes.name}
                             width={150}
                             height={150}

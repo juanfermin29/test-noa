@@ -19,7 +19,7 @@ const userSlice = createSlice({
                 return {
                     id: pro.id,
                     name: pro.attributes.name,
-                    url: pro.attributes.frontImage.data.attributes.url
+                    url: pro.attributes.frontImage
                 }
             });
         },

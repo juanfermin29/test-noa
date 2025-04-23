@@ -26,7 +26,7 @@ export const ToggleFavoriteButton = ({ product }: Props) => {
             dispatch(addFavoriteAction({
                 id: product.id,
                 name: product.attributes.name,
-                url: product.attributes.frontImage.data.attributes.url,
+                url: product.attributes.frontImage,
             }))
         }
         await refetch();

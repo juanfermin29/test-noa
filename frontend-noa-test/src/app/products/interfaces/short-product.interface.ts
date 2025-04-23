@@ -8,20 +8,5 @@ export interface ProductData {
     name: string;
     price: number;
     createdAt: Date;
-    frontImage: FrontImage;
+    frontImage: string;
 }
-
-export interface FrontImage {
-    data: Data;
-}
-
-export interface Data {
-    id: number;
-    attributes: DataAttributes;
-}
-
-export interface DataAttributes {
-    url: string;
-    alternativeText: null;
-}
-

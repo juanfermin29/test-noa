@@ -21,11 +21,10 @@ export const ProductsCarousel = () => {
       try {
         const res = await fetch(
           process.env.NEXT_PUBLIC_STRAPI_BASE_API +'/api/products?' +
-          'fields[0]=name&fields[1]=price&fields[2]=createdAt&' +
-          'populate[frontImage][fields][0]=url&' +
-          'populate[frontImage][fields][1]=alternativeText&' +
+          'fields[0]=name&fields[1]=price&fields[2]=createdAt&fields[3]=frontImage&' +
           'pagination[page]=1&pagination[pageSize]=10'
         );
+
         const data = await res.json();
         setProducts(data.data);
       } catch (error) {
@@ -52,7 +51,7 @@ export const ProductsCarousel = () => {
 
       <div className="embla overflow-visible pb-2" ref={emblaRef}>
         <div className="embla__container flex gap-8 pl-4">
-          {products.map((product) => (
+          {products?.map((product) => (
             <div
               key={product.id}
               className="embla__slide min-w-[300px] flex-shrink-0"

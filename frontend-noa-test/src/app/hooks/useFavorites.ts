@@ -17,7 +17,7 @@ export const useFavorites = () => {
 
             if (Array.isArray(data) && data.length) {
                 let url = process.env.NEXT_PUBLIC_STRAPI_BASE_API
-                    + '/api/products?fields[0]=name&populate[frontImage][fields][0]=url&populate[frontImage][fields][1]=alternativeText'
+                    + '/api/products?fields[0]=name&fields[1]=frontImage'
                 for (let index = 0; index < data.length; index++) {
                     const id = data[index];
                     url = url + '&filters[id][$in][' + index + ']=' + id;

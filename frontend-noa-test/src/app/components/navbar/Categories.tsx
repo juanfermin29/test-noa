@@ -5,6 +5,7 @@ import { Category } from './interfaces/category.interface';
 async function getCategories(): Promise<Category[]> {
   const res = await fetch(process.env.NEXT_PUBLIC_FIND_CATEGORIES!);
   const data = await res.json();
+  console.log("")
   return data.data; 
 }
 
@@ -15,7 +16,7 @@ export const Categories = async () => {
     <div className="border-t overflow-x-auto">
       <div className="container mx-auto px-4 grid justify-center">
         <ul className="flex space-x-6 py-3">
-          {categories.map((category) => (
+          {categories?.map((category) => (
             <li key={category.id}>
               <Link
                 href={`/products?category=${category.attributes.name.replace(/\s+/g, '-')}`}

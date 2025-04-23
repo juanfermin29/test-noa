@@ -422,7 +422,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     > &
       Attribute.Private;
     description: Attribute.Text;
-    frontImage: Attribute.Media<'images'> & Attribute.Required;
+    frontImage: Attribute.String & Attribute.Required;
     hours: Attribute.Decimal &
       Attribute.SetMinMax<
         {
@@ -491,7 +491,7 @@ export interface ApiTutorTutor extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 300;
       }>;
-    image: Attribute.Media<'images', true>;
+    image: Attribute.String & Attribute.Required;
     name: Attribute.String;
     profesion: Attribute.String;
     publishedAt: Attribute.DateTime;

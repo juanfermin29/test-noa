@@ -13,7 +13,7 @@ export const ProductCard = ({ products, className }: Props) => {
             <div className={`bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl ${className}`}>
                 <div className="relative h-48 w-full border[">
                     <Image
-                        src={process.env.NEXT_PUBLIC_STRAPI_BASE_API + products.attributes.frontImage.data.attributes.url}
+                        src={products.attributes.frontImage}
                         alt={products.attributes.name}
                         fill
                         className="object-cover"

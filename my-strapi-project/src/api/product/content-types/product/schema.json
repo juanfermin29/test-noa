@@ -39,14 +39,6 @@
       "relation": "oneToMany",
       "target": "api::tutor.tutor"
     },
-    "frontImage": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "shortDescription": {
       "type": "string",
       "maxLength": 120
@@ -58,6 +50,10 @@
     },
     "multimedia": {
       "type": "text"
+    },
+    "frontImage": {
+      "type": "string",
+      "required": true
     }
   }
 }

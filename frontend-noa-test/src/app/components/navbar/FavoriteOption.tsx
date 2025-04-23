@@ -14,7 +14,7 @@ export const FavoriteOption = ({ product }: Props) => {
         }>
             <Link href={`/products/${product.id}`} className="flex items-center gap-3 h-full">
                 <Image
-                    src={process.env.NEXT_PUBLIC_STRAPI_BASE_API + product?.url}
+                    src={product?.url}
                     alt={product.name}
                     width={60}
                     height={100}

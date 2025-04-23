@@ -15,20 +15,16 @@
     "name": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "profesion": {
       "type": "string"
     },
     "description": {
       "type": "text",
       "maxLength": 300
+    },
+    "image": {
+      "type": "string",
+      "required": true
     }
   }
 }
